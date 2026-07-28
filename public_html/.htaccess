@@ -1,0 +1,83 @@
+
+<IfModule mod_rewrite.c>
+
+    ############################################
+    # 🔒 SEGURIDAD BÁSICA DEL SERVIDOR
+    ############################################
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    ############################################
+    # 🔥 FORZAR DOMINIO SIN WWW (CSRF / COOKIES)
+    ############################################
+
+    # RewriteCond %{HTTP_HOST} ^www\.aaronm297.sg-host\.com$ [NC]
+    RewriteCond %{HTTP_HOST} ^www\.aaronm297.sg-host\.com$ [NC,OR]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://aaronm297.sg-host.com/$1 [L,R=301]
+
+    ############################################
+    # 🔐 PROTEGER ARCHIVOS CRÍTICOS
+    ############################################
+
+    # Bloquear acceso directo a archivos sensibles
+    <FilesMatch "^(?:\.env|composer\.json|composer\.lock|artisan|server\.php)">
+        Require all denied
+    </FilesMatch>
+
+    # Proteger index.php de accesos raros
+    <Files "index.php">
+        Require all granted
+    </Files>
+
+    ############################################
+    # 🛡️ BLOQUEAR EJECUCIÓN PHP NO AUTORIZADA
+    ############################################
+
+    <FilesMatch "\.(php|phtml|phar|php3|php4|php5|php7|php8)$">
+        Require all denied
+    </FilesMatch>
+
+    # Permitir SOLO index.php
+    <Files "index.php">
+        Require all granted
+    </Files>
+
+    ############################################
+    # 🧯 PROTECCIÓN CONTRA ATAQUES COMUNES
+    ############################################
+
+    RewriteCond %{QUERY_STRING} (base64_encode|eval\(|shell_exec|system\(|passthru|proc_open|assert\() [NC]
+    RewriteRule .* - [F,L]
+
+    ############################################
+    # 🔑 HEADERS PARA AUTH / CSRF
+    ############################################
+
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{HTTP:x-xsrf-token} .
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    ############################################
+    # 🔁 QUITAR TRAILING SLASH
+    ############################################
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    ############################################
+    # 🚀 FRONT CONTROLLER (LARAVEL)
+    ############################################
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+
+</IfModule>

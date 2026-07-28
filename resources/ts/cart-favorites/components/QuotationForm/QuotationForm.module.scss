@@ -1,0 +1,53 @@
+.modal {
+    background: #000000e5;
+
+    .body {
+        // background: #fff;
+    }
+
+    .header {
+        // background: #fff;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input,
+        textarea {
+            &:focus {
+                box-shadow: 0 0 6px -4px #37b202;
+            }
+        }
+    }
+
+    .sendButton {
+        svg {
+            display: block;
+        }
+
+        path {
+            fill: #37b202;
+        }
+    }
+
+    textarea,
+    input {
+        border-radius: var(--radius-sm);
+    }
+}
+
+.sendFormBox {
+    content: 'sendFormBox';
+}
+
+.sendButton {
+    content: 'sendButton';
+}
+
+.spinner {
+    path:nth-child(2) {
+        fill: #37b202;
+    }
+}

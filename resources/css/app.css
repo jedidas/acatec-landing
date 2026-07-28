@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
+
+@theme {
+    --color-brand-green: #79d661;
+}
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: 'wdth' 100;
+}

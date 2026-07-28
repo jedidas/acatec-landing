@@ -1,0 +1,13 @@
+.cartApp {
+  .productList {
+    @apply flex flex-col gap-3 mb-5;
+  }
+
+  .empty {
+    @apply bg-softGray border border-lightGray flex justify-center items-center p-10;
+
+    p {
+      @apply text-lg font-bold mb-1 text-blackPearl;
+    }
+  }
+}

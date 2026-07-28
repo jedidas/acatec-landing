@@ -1,0 +1,231 @@
+MAILS
+http://localhost:8025/
+
+Creación de Modelos
+
+./vendor/bin/sail php artisan make:model Banner -m
+./vendor/bin/sail php artisan make:model Email -m
+./vendor/bin/sail php artisan make:model Quotation -m
+./vendor/bin/sail php artisan make:model Category -m
+./vendor/bin/sail php artisan make:model Product -m
+./vendor/bin/sail php artisan make:model Image -m
+./vendor/bin/sail php artisan make:model Promotion -m
+./vendor/bin/sail php artisan make:model Page -m
+./vendor/bin/sail php artisan make:model SeoData -m
+
+Filament-resource
+./vendor/bin/sail php artisan make:filament-resource Banner
+./vendor/bin/sail php artisan make:filament-resource Email
+./vendor/bin/sail php artisan make:filament-resource Image
+./vendor/bin/sail php artisan make:filament-resource Promotion --view
+./vendor/bin/sail php artisan make:filament-resource Product
+./vendor/bin/sail php artisan make:filament-resource Setting
+./vendor/bin/sail php artisan make:filament-resource Category
+./vendor/bin/sail php artisan make:filament-resource Page
+
+
+./vendor/bin/sail php artisan make:filament-resource Quotation --view
+
+
+./vendor/bin/sail php artisan make:filament-widget InformationWidget
+
+
+
+./vendor/bin/sail php artisan make:filament-page ViewCategory --resource=CategoryResource --type=ViewRecord
+./vendor/bin/sail php artisan make:filament-page ViewProduct --resource=ProductResource --type=ViewRecord
+./vendor/bin/sail php artisan make:filament-page ViewPromotion --resource=PromotionResource --type=ViewRecord
+
+./vendor/bin/sail composer require fruitcake/laravel-debugbar --dev
+./vendor/bin/sail php artisan vendor:publish --provider="Fruitcake\LaravelDebugbar\ServiceProvider"
+
+
+./vendor/bin/sail php artisan make:filament-resource Banner --model-namespace=Banner
+
+
+
+./vendor/bin/sail php artisan make:filament-relation-manager ProductResource images Image
+
+
+./vendor/bin/sail php artisan make:factory CategoryFactory --model=Category
+./vendor/bin/sail php artisan make:seeder CategorySeeder
+
+./vendor/bin/sail php artisan make:factory ProductFactory --model=Product
+./vendor/bin/sail php artisan make:seeder ProductSeeder
+
+
+Creación de Controllers
+
+./vendor/bin/sail php artisan make:controller MainController
+./vendor/bin/sail php artisan make:controller EmailController
+
+Creación de Requests
+
+./vendor/bin/sail php artisan make:request ContactFormRequest
+./vendor/bin/sail php artisan make:request QuoteFormRequest
+
+
+Creación de Factories
+
+./vendor/bin/sail php artisan make:factory CustomerFactory --model=Customer
+./vendor/bin/sail php artisan make:factory EmailFactory --model=Email
+
+
+Creación de Seeders
+
+./vendor/bin/sail php artisan make:seeder CustomerSeeder
+./vendor/bin/sail php artisan make:seeder EmailSeeder
+
+
+Creación de Componentes
+
+./vendor/bin/sail php artisan make:component SvgIcon
+Creación de Filament Resources
+./vendor/bin/sail php artisan make:filament-resource User
+Creación de Filament Relation Managers
+./vendor/bin/sail php artisan make:filament-relation-manager ScheduleResource additionals name
+Creación de Livewire Components
+./vendor/bin/sail php artisan make:livewire ContactForm
+./vendor/bin/sail php artisan livewire:form FormComponent
+./vendor/bin/sail php artisan make:livewire QuotationFormComponent
+
+./vendor/bin/sail php artisan make:livewire ProductsByCategory
+
+
+Comandos de Sail
+
+./vendor/bin/sail
+./vendor/bin/sail up
+./vendor/bin/sail php artisan migrate:fresh --seed
+./vendor/bin/sail php artisan make:provider ViewServiceProvider
+./vendor/bin/sail php artisan make:filament-relation-manager ScheduleResource additionals name
+./vendor/bin/sail php artisan make:component SvgIcon
+./vendor/bin/sail composer require filament/filament:"^3.2" -W
+./vendor/bin/sail php artisan make:filament-resource Product
+./vendor/bin/sail php artisan make:filament-relation-manager ScheduleResource additionals name
+./vendor/bin/sail php artisan filament:install --panels
+./vendor/bin/sail php artisan vendor:publish --tag=filament-config
+./vendor/bin/sail php artisan vendor:publish --tag=filament-panels-translations
+./vendor/bin/sail php artisan storage:link
+./vendor/bin/sail php artisan inertia:middleware
+
+./vendor/bin/sail composer require staudenmeir/eloquent-eager-limit:"^1.0"
+./vendor/bin/sail composer dumpautoload -o
+
+./vendor/bin/sail composer require inertiajs/inertia-laravel
+
+
+Otros Comandos
+
+/usr/local/php82/bin/php artisan storage:link
+
+./vendor/bin/sail composer require google/recaptcha "^1.3"
+
+./vendor/bin/sail composer require rzl-app/laravel-blade-minify
+
+
+
+./vendor/bin/sail php artisan vendor:publish --tag=RzlLaravelBladeMinify
+
+
+Email
+./vendor/bin/sail php artisan make:event EmailCreated
+./vendor/bin/sail php artisan make:listener EmailCreatedListener --event=EmailCreated
+./vendor/bin/sail php artisan make:mail EmailReceived
+./vendor/bin/sail php artisan make:mail EmailConfirmation
+
+
+
+Quotation
+./vendor/bin/sail php artisan make:event QuotationEmailEvent
+./vendor/bin/sail php artisan make:listener QuotationEmailListener --event=QuotationEmailEvent
+./vendor/bin/sail php artisan make:mail QuotationEmailReceived
+./vendor/bin/sail php artisan make:mail QuotationEmailConfirmation
+
+
+
+TODO
+--- Enviar cotizacion, enviar correos de cotizacion
+
+Crear modulo de cotizacion
+Limpiar carrito cuando se confirme el envio
+
+Comprobar productos con base de datos
+
+Agregar Buscador
+
+Agregar panel de configuracion
+
+Agregar SEO information
+
+Agregar Debugbar
+
+Eliminar elementos relacionados en cascada
+
+Eliminar imagenes
+Investigar crear multiples imagenes por archivo
+
+pnpm build --mode production
+
+
+ln -s public_html public
+
+Crear link simbolico WINDOWS
+
+Abrir CMD como administrador
+mklink /d C:\laragon\www\navarro-hornos\public C:\laragon\www\navarro-hornos\public_html
+
+
+
+
+./vendor/bin/sail down --rmi all -v
+./vendor/bin/sail up --build
+./vendor/bin/sail php artisan config:cache
+./vendor/bin/sail php artisan storage:link
+
+sudo composer self-update --1
+
+
+./vendor/bin/sail composer self-update --1
+
+./vendor/bin/sail docker-compose down -v
+./vendor/bin/sail docker-compose up -d
+
+
+
+
+./vendor/bin/sail php artisan make:event EmailCreated
+./vendor/bin/sail php artisan make:event QuotationCreated
+
+./vendor/bin/sail php artisan make:listener SendContactEmail
+./vendor/bin/sail php artisan make:listener SendContactReceivedEmail
+
+./vendor/bin/sail php artisan make:listener SendQuotationEmail
+./vendor/bin/sail php artisan make:listener SendQuotationReceivedEmail
+
+
+
+./vendor/bin/sail php artisan make:mail EmailReceived
+./vendor/bin/sail php artisan make:mail EmailConfirmed
+
+./vendor/bin/sail php artisan make:mail QuotationReceivedEmail
+./vendor/bin/sail php artisan make:mail QuotationConfirmedEmail
+
+
+./vendor/bin/sail composer global update laravel/installer
+
+
+./vendor/bin/sail down --rmi all -v
+./vendor/bin/sail up --build
+./vendor/bin/php artisan config:cache
+./vendor/bin/sail up
+
+
+./vendor/bin/php artisan storage:link
+
+sudo composer self-update --1
+
+
+./vendor/bin/sail down
+docker volume rm base-12_sail-meilisearch
+docker volume rm base-12_sail-redis
+./vendor/bin/sail up

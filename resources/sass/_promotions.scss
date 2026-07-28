@@ -1,0 +1,28 @@
+.promotions_page {
+    padding-inline: calc(var(--spacing) * 3);
+
+    p,
+    p * {
+        font-size: var(--text-base);
+        line-height: var(--tw-leading, var(--text-sm--line-height));
+        box-sizing: border-box;
+        word-break: break-all;
+    }
+
+    p {
+        margin-bottom: calc(var(--spacing) * 3);
+    }
+
+    strong,
+    em {
+        font-weight: bold;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    a {
+        text-decoration: underline;
+    }
+}

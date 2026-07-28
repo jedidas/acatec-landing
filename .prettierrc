@@ -1,0 +1,30 @@
+{
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "wrapAttributes": "auto",
+    "wrapAttributesMinAttrs": 2,
+    "sortTailwindcssClasses": true,
+    "sortHtmlAttributes": "none",
+    "indentInnerHtml": true,
+    "extraLiners": "",
+    "trailingCommaPHP": true,
+    "componentPrefix": "x-,livewire:",
+    "trailingComma": "all",
+    "phpVersion": "8.4",
+    "plugins": [
+        "prettier-plugin-blade",
+        "prettier-plugin-tailwindcss"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.blade.php"
+            ],
+            "options": {
+                "parser": "blade"
+            }
+        }
+    ]
+}

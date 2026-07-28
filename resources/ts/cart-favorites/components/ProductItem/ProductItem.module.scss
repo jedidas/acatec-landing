@@ -1,0 +1,21 @@
+.productItem {
+    &.isValid {
+        opacity: 0.6;
+    }
+}
+.inputQuantity {
+    border: 1px solid transparent;
+    border-top-color: #ebe6e7;
+    border-bottom-color: #ebe6e7;
+    padding: 0;
+
+    input,
+    div {
+        border: none;
+        border-radius: 0;
+    }
+    input {
+        height: 100%;
+        text-align: center;
+    }
+}

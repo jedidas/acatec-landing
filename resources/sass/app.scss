@@ -1,0 +1,141 @@
+@use '../../node_modules/swiper/swiper.css';
+@use '../../node_modules/swiper/modules/navigation.css';
+@use '../../node_modules/swiper/modules/pagination.css';
+
+@use './promotions';
+@use './header';
+@use './hamburger';
+@use './headroom';
+@use './footer';
+
+.grecaptcha-badge {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+.title-box {
+    padding-inline: calc(var(--spacing) * 3);
+}
+
+[data-modal-backdrop='static'] {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quote-form-box,
+.contact-form-box {
+    .sendingBox {
+        background: url(@resources/assets/images/spinner-bg.gif) no-repeat center center #fff;
+        background-size: contain;
+    }
+
+    .sendingBox,
+    .messageBox {
+        display: none;
+    }
+
+    &.sent {
+        form,
+        .message,
+        .messageBox {
+            display: block;
+        }
+        .sendingBox {
+            display: none;
+        }
+    }
+
+    &.sending {
+        form {
+            display: none;
+        }
+        .sendingBox {
+            display: block;
+        }
+    }
+
+    &.error {
+        .sendingBox {
+            display: none;
+        }
+        form,
+        .messageBox {
+            display: block;
+        }
+
+        textarea,
+        input {
+            border-color: var(--color-rose-500);
+            color: var(--color-rose-500);
+        }
+        label {
+            color: var(--color-rose-500);
+        }
+    }
+}
+
+.messageBox .message,
+.messageBox .error {
+    display: none;
+}
+
+.messageBox.visible-success .message {
+    display: block;
+}
+.messageBox.visible-error .error {
+    display: block;
+    color: var(--color-rose-500);
+}
+
+.dark\:bg-gray-700 {
+    background-color: var(--color-white);
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-white);
+    }
+}
+
+.dark\:text-white {
+    color: var(--color-gray-900);
+    @media (prefers-color-scheme: dark) {
+        color: var(--color-gray-900);
+    }
+}
+
+.dark\:text-gray-300 {
+    color: var(--color-gray-500);
+    @media (prefers-color-scheme: dark) {
+        color: var(--color-gray-500);
+    }
+}
+
+.spinner-picture {
+    background: url(@resources/assets/images/spinner-bg.gif) no-repeat center center #fff;
+    background-size: 60px auto;
+}
+
+.dotPatter {
+    &::before {
+        background: url(@resources/assets/images/pattern.png) repeat 0 0;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.top-banner {
+    .swiper-slide {
+        @extend .dotPatter;
+    }
+}
+
+.top-small-banner {
+    position: relative;
+
+    @extend .dotPatter;
+}

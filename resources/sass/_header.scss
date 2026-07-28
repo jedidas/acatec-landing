@@ -1,0 +1,9 @@
+header.header {
+    height: 89px;
+    position: relative;
+    z-index: 50;
+
+    @media (width >= 64rem) {
+        height: 120px;
+    }
+}

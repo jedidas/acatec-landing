@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable",
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node",
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        //
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@helps/*": [
+                "./resources/ts/helps/*"
+            ],
+            "@modules/*": [
+                "./resources/ts/modules/*"
+            ],
+            "@resources/*": [
+                "./resources/*"
+            ],
+            "@services/*": [
+                "./resources/ts/services/*"
+            ],
+            "@utilities/*": [
+                "./resources/react/utilities/*"
+            ],
+            "ziggy-js": [
+                "./vendor/tightenco/ziggy"
+            ]
+        },
+        "types": [
+            "node",
+            "vite/client"
+        ],
+    },
+    "include": [
+        "resources"
+    ],
+    "exclude": [],
+    "references": [
+        {
+            "composite": true,
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}
