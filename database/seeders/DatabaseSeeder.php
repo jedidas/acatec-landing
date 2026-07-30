@@ -18,18 +18,16 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()->create([
             'name' => 'Jedidas',
-            'password' => Hash::make('@T#E$>9;V5:9<7*4'),
+            'password' => Hash::make("r\+Mto(iU~5>;s0'*3"),
             'email' => 'jedidas@gmail.com',
         ]);
         User::factory()->create([
             'name' => 'manager',
-            'password' => Hash::make('hD]<k84;30-nq@H4y'),
-            'email' => 'base@website.com',
+            'password' => Hash::make('>5ZH2?2;T}8?(4u<£1'),
+            'email' => 'info@acatecso.com',
         ]);
 
         $this->call([
-            CategorySeeder::class,
-            ProductSeeder::class,
             SettingSeeder::class,
             PageSeeder::class,
         ]);

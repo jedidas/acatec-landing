@@ -15,11 +15,9 @@ class SchemaFactory
             'Service'       => (new ServiceSchema(model: $model, image: $finalImage))->toArray(),
             'Event'         => (new EventSchema(model: $model, image: $finalImage))->toArray(),
             'SaleEvent'     => (new SaleEventSchema(model: $model, image: $finalImage))->toArray(),
-            'Category'      => (new CategorySchema(category: $model, image: $finalImage))->toArray(),
             'WebPage'       => (new WebPageSchema(model: $model, image: $finalImage))->toArray(),
             'StaticWebPage' => (new StaticWebPageSchema(model: $model, image: $finalImage))->toArray(),
             'CreativeWork'  => (new CreativeWorkSchema(model: $model, image: $finalImage))->toArray(),
-            'ProductSchemaFinal'  => (new ProductSchemaFinal(model: $model, image: $finalImage))->toArray(),
             'LocalBusiness' => (new LocalBusinessSchema(model: $model, image: $finalImage))->toArray(),
             default         => (new OfferSchema(model: $model, image: $finalImage))->toArray(),
         };

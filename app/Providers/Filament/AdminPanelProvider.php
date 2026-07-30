@@ -3,10 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Resources\Banners\BannerResource;
-use App\Filament\Resources\Categories\CategoryResource;
-use App\Filament\Resources\Products\ProductResource;
 use App\Filament\Resources\Emails\EmailResource;
-use App\Filament\Resources\Images\ImageResource;
 use App\Filament\Resources\Pages\PageResource;
 use App\Filament\Resources\Promotions\PromotionResource;
 use App\Filament\Resources\Quotations\QuotationResource;
@@ -82,10 +79,6 @@ class AdminPanelProvider extends PanelProvider
                             ...QuotationResource::getNavigationItems(),
                             ...PromotionResource::getNavigationItems(),
                             ...BannerResource::getNavigationItems(),
-                            ...CategoryResource::getNavigationItems(),
-                            ...ProductResource::getNavigationItems(),
-
-                            ...ImageResource::getNavigationItems(),
                             ...SettingResource::getNavigationItems(),
                             NavigationItem::make('Limpiar cache')
                                 ->url(route('cache-clear.index'), shouldOpenInNewTab: false)

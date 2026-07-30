@@ -15,7 +15,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'site_name',
             'label' => 'Nombre del sitio',
-            'value' => 'Nombre de la pagina web',
+            'value' => 'Acatec',
             'type' => 'text',
             'order' => 1,
         ]);
@@ -23,7 +23,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'site_slogan',
             'label' => 'Slogan del sitio',
-            'value' => 'Slogan',
+            'value' => 'Salud Ocupacional y Ambiente',
             'type' => 'text',
             'order' => 2,
         ]);
@@ -31,7 +31,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'theme_color',
             'label' => 'Color del sitio',
-            'value' => '#238dbe',
+            'value' => '#1B0166',
             'type' => 'color',
             'order' => 2,
         ]);
@@ -39,7 +39,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'title_legend',
             'label' => 'Leyenda del titulo',
-            'value' => 'Titulo Slogan',
+            'value' => 'Programas de bienestar',
             'type' => 'text',
             'order' => 2,
         ]);
@@ -55,7 +55,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'email',
             'label' => 'Correo electronico del formulario',
-            'value' => 'email@gmail.com',
+            'value' => 'info@acatecso.com',
             'type' => 'text',
             'order' => 4,
         ]);
@@ -63,7 +63,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'site_email',
             'label' => 'Correo electronico visible',
-            'value' => 'email@gmail.com',
+            'value' => 'info@acatecso.com',
             'type' => 'text',
             'order' => 5,
         ]);
@@ -75,10 +75,7 @@ class SettingSeeder extends Seeder
             'type' => 'values',
             'attributes' => [
                 [
-                    'value' => 'Lunes a viernes de 7:30am a 5:30pm.'
-                ],
-                [
-                    'value' => 'Sábado de 7:30am a 12:00md'
+                    'value' => 'Lunes a sábado de 8 am a 6 pm.'
                 ],
                 [
                     'value' => 'Domingo cerrado'
@@ -90,7 +87,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'telephone',
             'label' => 'Teléfono de contacto',
-            'value' => '+5000000000',
+            'value' => '+50670993933',
             'type' => 'text',
             'order' => 6,
         ]);
@@ -98,7 +95,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'telephone_name',
             'label' => 'Teléfono de visible',
-            'value' => '0000 0000',
+            'value' => '+506 7099 3933',
             'type' => 'text',
             'order' => 6,
         ]);
@@ -106,7 +103,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'whatsapp',
             'label' => 'Whatsapp',
-            'value' => '000-00000',
+            'value' => '7099-3933',
             'type' => 'text',
             'order' => 7,
         ]);
@@ -114,7 +111,7 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'whatsapp_number',
             'label' => 'Numero Whatsapp',
-            'value' => '00000000',
+            'value' => '70993933',
             'type' => 'text',
             'order' => 7,
         ]);
@@ -126,14 +123,9 @@ class SettingSeeder extends Seeder
             'type' => 'phones',
             'attributes' => [
                 [
-                    "number" => "Casa",
-                    "is_whatsapp" => false,
-                    "visible_number" => "00000000"
-                ],
-                [
-                    "number" => "Celular",
+                    "number" => "70993933",
                     "is_whatsapp" => true,
-                    "visible_number" => "00000000"
+                    "visible_number" => "+506 7099-3933"
                 ]
             ],
             'order' => 6,
@@ -145,14 +137,14 @@ class SettingSeeder extends Seeder
             'value' => '',
             'values' => [
                 [
-                    "url" => "https=>//facebook.com/Facebook",
-                    "name" => "Facebook",
+                    "url" => "https://www.facebook.com/acatec17",
+                    "name" => "acatec17",
                     "networks" => "facebook"
                 ],
                 [
-                    "url" => "https=>//www.tiktok.com/@TikTok",
-                    "name" => "TikTok",
-                    "networks" => "tiktok"
+                    "url" => "https://www.instagram.com/acatec_cr",
+                    "name" => "acatec_cr",
+                    "networks" => "instagram"
                 ]
             ],
             'type' => 'social_networks',
@@ -184,9 +176,17 @@ class SettingSeeder extends Seeder
         ]);
 
         Setting::create([
+            'key' => 'map_iframe',
+            'label' => 'Mapa',
+            'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.3435530035595!2d-84.06736332448527!3d9.98845377323228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3417c3ec9b7%3A0xce577c5bac09ea49!2sAMB%20ideas!5e0!3m2!1ses-419!2sch!4v1785435956234!5m2!1ses-419!2sch',
+            'type' => 'text',
+            'order' => 13,
+        ]);
+
+        Setting::create([
             'key' => 'street_address',
             'label' => 'Dirección',
-            'value' => 'Direccion del local',
+            'value' => 'Curridabat, San José, Costa Rica',
             'type' => 'text',
             'order' => 12,
         ]);
@@ -197,14 +197,6 @@ class SettingSeeder extends Seeder
             'value' => 'Descripción de la tienda',
             'type' => 'text',
             'order' => 13,
-        ]);
-
-        Setting::create([
-            'key' => 'items_per_page',
-            'label' => 'Artículo por página',
-            'value' => 16,
-            'type' => 'number',
-            'order' => 14,
         ]);
 
         Setting::create([

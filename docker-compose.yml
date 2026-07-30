@@ -1,11 +1,11 @@
 services:
     laravel.test:
         build:
-            context: "./vendor/laravel/sail/runtimes/8.5"
+            context: "./vendor/laravel/sail/runtimes/8.4"
             dockerfile: Dockerfile
             args:
                 WWWGROUP: "${WWWGROUP}"
-        image: "sail-8.5/app"
+        image: "sail-8.4/app"
         platform: linux/arm64/v8
         extra_hosts:
             - "host.docker.internal:host-gateway"
@@ -64,8 +64,7 @@ services:
             interval: 10s
             start_period: 30s
     phpmyadmin:
-        image: arm64v8/phpmyadmin:latest
-        platform: linux/arm64/v8
+        image: lscr.io/linuxserver/phpmyadmin:latest
         ports:
             - "8081:80"
         environment:
@@ -81,7 +80,7 @@ services:
             mysql:
                 condition: service_healthy
     redis:
-        image: "redis:alpine"
+        image: "redis:7-alpine"
         platform: linux/arm64/v8
         ports:
             - "${FORWARD_REDIS_PORT:-6379}:6379"

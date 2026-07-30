@@ -6,7 +6,7 @@ export default function ContactForm() {
     const formBox = document.querySelector<HTMLDivElement>('.contact-form-box');
 
     if (formBox) {
-        const validator = new JustValidate('#contact-form');
+        const validator = new JustValidate('#contacto');
 
         const API_PUBLIC_KEY = import.meta.env.VITE_API_PUBLIC_KEY;
         const formService = ContactFormService();

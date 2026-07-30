@@ -139,3 +139,102 @@
 
     @extend .dotPatter;
 }
+
+body {
+    &.open-menu {
+        overflow: hidden;
+
+        @media (width >= 64rem) {
+            overflow: auto;
+        }
+
+        nav.main-menu {
+            height: 100vh !important;
+            left: 0;
+            @media (width >= 64rem) {
+                height: auto !important;
+            }
+        }
+
+        &::after {
+            background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
+            backdrop-filter: var(--tw-backdrop-blur,);
+            content: '';
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+
+            @media (width >= 64rem) {
+                display: none;
+            }
+        }
+
+        .main-menu-list {
+            a {
+                background: #ffffff1f;
+                @media (width >= 64rem) {
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.headroom--not-top.headroom--bottom,
+    &.headroom--not-top.headroom--not-bottom.headroom--pinned,
+    &.headroom--not-bottom.headroom--not-top.headroom--unpinned {
+        .fixed-logotype {
+            display: block;
+            height: calc(var(--spacing) * 10);
+        }
+
+        .top-bar {
+            padding: calc(var(--spacing) * 3) !important;
+            a {
+                height: calc(var(--spacing) * 10);
+                width: 100px;
+            }
+        }
+
+        .static-logotype {
+            display: none;
+        }
+
+        .top-info-bar,
+        .main-menu {
+            height: auto;
+        }
+
+        .main-menu {
+            @media (width >= 80rem) {
+                padding-left: calc(var(--spacing) * 8);
+                padding-left: calc(var(--spacing) * 16);
+            }
+        }
+
+        .main-menu-list {
+            gap: calc(var(--spacing) * 1);
+
+            @media (width >= 64rem) {
+                gap: calc(var(--spacing) * 3);
+            }
+
+            a {
+                background: #ffffff1f;
+                padding: calc(var(--spacing) * 3);
+            }
+        }
+
+        .top-info-container {
+            padding-block: calc(var(--spacing) * 1.5);
+        }
+
+        a {
+            padding: 0;
+        }
+    }
+}

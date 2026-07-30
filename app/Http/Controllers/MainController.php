@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Image;
 use App\Models\Page;
-use App\Models\Product;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Client\RequestException;
@@ -14,15 +11,14 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
 
-    public function __construct(public Page $page, public Category $category, public Product $product, public Image $image) {}
+    public function __construct(public Page $page) {}
 
     public function home()
     {
         $sectionName = 'home';
-        $productsFromEachCategory = $this->product->getSomeFromEachCategory();
         $data = $this->page->getBySeoSlug(slug: 'home.index');
 
-        return view('pages.home', compact('data',  'sectionName', 'productsFromEachCategory'));
+        return view('pages.home', compact('data',  'sectionName'));
     }
 
     public function about()
@@ -50,22 +46,15 @@ class MainController extends Controller
             }
         }
 
-        $data = $this->category->getByCategorySlug(slug: $categorySlug);
-        $products = $this->product->searchByCategoryId(categoryId: $data->id, orderBy: $orderBy);
         $sectionName = $categorySlug;
 
-        return view('pages.category', compact('data', 'products', 'sectionName', 'orderBy'));
+        return view('pages.category', compact('sectionName', 'orderBy'));
     }
 
     public function productDetail(string $category, string $productSlug)
     {
-        $category = $this->category->getByCategorySlug(slug: $category);
-        $data = $this->product->getDetailByCategoryIdAndSlug($category->id, $productSlug);
-        $images = $this->image->getAllByProductId($data->id);
-        $relatedProducts = $this->product->getRelatedById(id: $data->id, categoryId: $data->category_id, count: 10);
-        $sectionName = "{$category}-{$productSlug}";
-
-        return view('pages.product-detail', compact('category', 'data', 'images', 'sectionName', 'relatedProducts'));
+        $sectionName = "productDetail";
+        return view('pages.product-detail', compact('sectionName'));
     }
 
     public function search(Request $request, $search = null)
@@ -78,11 +67,7 @@ class MainController extends Controller
             return redirect()->route('home.index');
         }
 
-        $categoriesIds = $this->category->search($search);
-        $products = $this->product->search($search, $categoriesIds);
-
         return view('pages.search', [
-            'products' => $products,
             'search' => $search,
             'sectionName' => 'search',
         ]);
@@ -102,23 +87,10 @@ class MainController extends Controller
     public function verifyItems(Request $request)
     {
         try {
-            $products = $this->product->getAllByArrayIds($request->all());
-
-            $products = $products->map(function ($item) {
-                [$categoryName] = explode('/', $item->category->slug);
-                $item->url = route('product.detail', [
-                    'categorySlug' => $categoryName,
-                    'productSlug' => $item->slug,
-                ]);
-                $item->img = asset('storage/' . $item->image);
-                $item->final_price = $item->final_price;
-                return $item->only(['id', 'name', 'image', 'price', 'discount', 'final_price', 'url']);
-            });
-
             return response()->json([
                 'status' => 200,
                 'message' => "",
-                'data' => $products->toArray()
+                'data' => []
             ]);
         } catch (RequestException $exception) {
 

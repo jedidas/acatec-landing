@@ -2,7 +2,114 @@
 @import 'flowbite/src/themes/default';
 
 @theme {
-    --color-brand-green: #79d661;
+    /* ==========================
+     Primary
+  ========================== */
+    --color-primary-50: #f2eeff;
+    --color-primary-100: #e2daff;
+    --color-primary-200: #c5b5ff;
+    --color-primary-300: #a18bff;
+    --color-primary-400: #6b4dff;
+    --color-primary-500: #3200c1;
+    --color-primary-600: #240188;
+    --color-primary-700: #1b0166;
+    --color-primary-800: #110043;
+    --color-primary-900: #0a002a;
+
+    /* ==========================
+     Secondary / Blue
+  ========================== */
+    --color-secondary-50: #eaf3ff;
+    --color-secondary-100: #d3e6ff;
+    --color-secondary-200: #a8cdff;
+    --color-secondary-300: #73adff;
+    --color-secondary-400: #3c8dff;
+    --color-secondary-500: #116df9;
+    --color-secondary-600: #0551c4;
+    --color-secondary-700: #00398e;
+    --color-secondary-800: #002359;
+    --color-secondary-900: #001433;
+
+    /* ==========================
+     Accent / Orange
+  ========================== */
+    --color-accent-50: #fff1ec;
+    --color-accent-100: #ffe2d6;
+    --color-accent-200: #ffc5ae;
+    --color-accent-300: #ffa27b;
+    --color-accent-400: #ff7645;
+    --color-accent-500: #f44f1a;
+    --color-accent-600: #cc3200;
+    --color-accent-700: #a32800;
+    --color-accent-800: #7a1e00;
+    --color-accent-900: #511300;
+
+    /* ==========================
+     Success
+  ========================== */
+    --color-success-50: #edf9ec;
+    --color-success-100: #d5f1d4;
+    --color-success-200: #a9e3a7;
+    --color-success-300: #7bd67a;
+    --color-success-400: #57c955;
+    --color-success-500: #3aaf35;
+    --color-success-600: #2d8b29;
+    --color-success-700: #21681e;
+    --color-success-800: #154513;
+    --color-success-900: #0b230a;
+
+    /* ==========================
+     Neutral
+  ========================== */
+    --color-neutral-50: #f5f8fa;
+    --color-neutral-100: #edf1f4;
+    --color-neutral-200: #dce3e8;
+    --color-neutral-300: #c5d0d8;
+    --color-neutral-400: #aebbc7;
+    --color-neutral-500: #8e9db3;
+    --color-neutral-600: #6e6e6e;
+    --color-neutral-700: #4f5c6c;
+    --color-neutral-800: #2f3947;
+    --color-neutral-900: #0f1e36;
+
+    /* ==========================
+     Base
+  ========================== */
+    --color-background: #ffffff;
+    --color-surface: #f5f8fa;
+    --color-surface-alt: #edf1f4;
+
+    --color-text: #0f1e36;
+    --color-text-muted: #6e6e6e;
+    --color-text-light: #8e9db3;
+
+    --color-border: #edf1f4;
+    --color-border-strong: #8e9db3;
+
+    /* ==========================
+     States
+  ========================== */
+    --color-info: #116df9;
+    --color-success: #3aaf35;
+    --color-warning: #f44f1a;
+    --color-danger: #cc3200;
+
+    /* ==========================
+     Radius
+  ========================== */
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+
+    /* ==========================
+     Shadows
+  ========================== */
+    --shadow-sm: 0 1px 2px rgb(15 30 54 / 0.05);
+    --shadow-md: 0 4px 12px rgb(15 30 54 / 0.1);
+    --shadow-lg: 0 12px 24px rgb(15 30 54 / 0.15);
 }
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

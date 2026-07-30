@@ -39,14 +39,8 @@
          @include('partials.header')
          <div class="app__banner">
              @yield('banner')
-             <div class="bg-amber-300 lg:relative">
-                 <button class="p-3">
-                     Explorar categorías
-                 </button>
-             </div>
          </div>
-         <div class="flex-1 grid lg:grid-cols-[250px_1fr]">
-             @include('partials.main-menu')
+         <div class="flex flex-col">
              <div class="flex flex-col justify-between overflow-hidden">
                  <section>
                      @yield('content')
@@ -60,7 +54,6 @@
          rel="noopener noreferrer" class="fixed top-1/2 right-0 md:right-4 z-10 -translate-1/2">
          <x-icon name="whatsapp" class="block h-8 w-8" />
      </a>
-     @include('partials.search-modal')
  </body>
 
  </html>

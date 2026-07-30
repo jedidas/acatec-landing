@@ -4,23 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cache;
 
-use App\Models\Category;
 use App\Models\Page;
-use App\Models\Product;
 use App\Models\Promotion;
 
 
 class SiteMapController extends Controller
 {
-    public function __construct(public Category $category, public Product $product, public Promotion $promotion) {}
+    public function __construct(public Promotion $promotion) {}
 
     public function index()
     {
         $staticPages = Page::STATIC_PAGES;
-        $categories = $this->category->getAllToSiteMap();
         $promotions = $this->promotion->getAll();
 
-        return response()->view('pages.sitemap', compact('categories', 'promotions', 'staticPages'))->header('Content-Type', 'text/xml');
+        return response()->view('pages.sitemap', compact('promotions', 'staticPages'))->header('Content-Type', 'text/xml');
     }
 
     public function manifest()

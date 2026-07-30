@@ -26,20 +26,5 @@ class ViewServiceProvider extends ServiceProvider
             ],
             'App\Http\ViewComposers\BannerViewComposer'
         );
-
-        View::composer(
-            [
-                'partials.main-menu',
-            ],
-            'App\Http\ViewComposers\MenuViewComposer'
-        );
-
-        View::composer(
-            [
-                'partials.featured-products',
-                'partials.featured-slider-products',
-            ],
-            'App\Http\ViewComposers\FeaturedProductsViewComposer'
-        );
     }
 }
