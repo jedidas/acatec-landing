@@ -10,8 +10,13 @@
 <footer class="bg-primary-700">
     <div class="bg-accent-500 h-28"></div>
     <section class="container m-auto mb-10 flex w-full flex-col-reverse justify-between gap-6 px-3 lg:flex-row">
-        <div class="w-full lg:w-1/2">
-            <div class="bg-primary-800/90 p-10">
+        <div class="w-full lg:w-1/2 pt-10">
+
+            <div class="bg-primary-800/90 backdrop-blur-md mb-5 p-10 py-5">
+                <x-title icon="outsourcing" variant="white" sub-heading="Aliados para su crecimiento">Contacto</x-title>
+            </div>
+
+            <div class="bg-primary-800/90 backdrop-blur-md p-10">
                 <p class="mb-6 text-sm text-white">
                     {{ __('Para conocer más sobre nuestros productos y servicios, escríbanos y con gusto te atenderemos.') }}
                 </p>
@@ -20,7 +25,7 @@
         </div>
         <div class="flex flex-col w-full lg:w-auto">
 
-            <div class="inline-block bg-primary-800/90 mb-5 p-7 pt-5 lg:max-w-96 w-full -mt-16">
+            <div class="inline-block bg-primary-800/90 backdrop-blur-md mb-5 p-7 pt-5 lg:max-w-96 w-full -mt-16">
 
                 <h3 class="flex items-center gap-3 text-white font-bold mb-6">
                     <x-icon name="info" class="h-8 w-8 fill-accent-500" />
@@ -33,7 +38,7 @@
                         <li>
                             <p>
                                 <a href="{{ $network->url }}"
-                                    class="flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                    class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
                                     target="_blank" rel="noopener noreferrer">
                                     <x-icon name="{{ $network->networks }}" class="h-5 w-5 fill-accent-500" />
                                     {{ $network->name }}
@@ -81,7 +86,7 @@
                     <li>
                         <p>
                             <a href="mailto:{{ config('settings.site_email') }}"
-                                class="flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
                                 target="_blank" rel="noopener noreferrer">
                                 <x-icon name="email" class="h-5 w-5 fill-accent-500" />
                                 {{ config('settings.site_email') }}
@@ -93,14 +98,14 @@
                             <p>
                                 @if ($telephone->is_whatsapp)
                                     <a href="https://api.whatsapp.com/send?phone=+506{{ $telephone->number }}"
-                                        class="flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                        class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
                                         target="_blank" rel="noopener noreferrer">
                                         <x-icon name="whatsapp-lines" class="h-5 w-5 fill-accent-500" />
                                         {{ $telephone->visible_number }}
                                     </a>
                                 @else
                                     <a href="mailto:{{ $telephone->number }}"
-                                        class="flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                        class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
                                         target="_blank" rel="noopener noreferrer">
                                         <x-icon name="phone" class="h-5 w-5 fill-accent-500" />
                                         {{ $telephone->visible_number }}
@@ -113,56 +118,56 @@
                 </ul>
             </div>
 
-            <div class="inline-block mb-5 bg-primary-800/90 p-7 lg:max-w-96 w-full">
+            <div class="inline-block mb-5 bg-primary-800/90 backdrop-blur-md p-7 lg:max-w-96 w-full">
                 <nav class="ul">
                     <h4 class="font-bold text-white text-dark-orange mb-3">{{ __('Menu') }}</h4>
                     <ul class="flex flex-col gap-2">
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="{{ route('home.index') }}"
-                                class="block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Inicio') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#capacitaciones" data-href="capacitaciones"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Capacitaciones') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#outsourcing" data-href="outsourcing"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Outsourcing') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#planes" data-href="planes"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Planes y programas') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#bandera" data-href="bandera"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Bandera azul') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#servicios" data-href="servicios"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Servicios') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#contacto" data-href="contacto"
-                                class="wd-scroll block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
                                 {{ __('Contacto') }}
                             </a>
                         </li>
@@ -177,8 +182,8 @@
             <div>
                 <p class="m-0 p-0 text-center text-sm sm:text-start">
                     Designed and developed by
-                    <a class="font-bold underline text-sm hover:text-orange" href="https://ambideas.com"
-                        target="_blank">
+                    <a class="font-bold underline text-sm hover:text-accent-500" href="https://ambideas.com"
+                        target="_blank" rel="noopener noreferrer">
                         AMBIDEAS.COM
                     </a>
                 </p>

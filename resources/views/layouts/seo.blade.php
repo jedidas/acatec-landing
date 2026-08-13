@@ -42,8 +42,6 @@
      @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/ts/app.ts'])
 
      @include('partials.tag-manager')
-
-     @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/ts/app.ts'])
  </head>
 
  <body
@@ -57,7 +55,6 @@
              <div class="flex flex-col justify-between overflow-hidden">
                  <section>
                      @yield('content')
-                     @yield('bottom-section')
                      @include('partials.footer')
                  </section>
              </div>

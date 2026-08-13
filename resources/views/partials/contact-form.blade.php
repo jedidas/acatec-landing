@@ -4,7 +4,7 @@
          <input type="hidden" name="token" class="token" />
 
          <div class="flex w-full flex-col gap-1 sm:flex-row sm:gap-4">
-             <div class="mb-3 w-full">
+             <div class="mb-2 w-full">
                  <label for="name" class="mb-2 block text-sm font-medium text-white">{{ __('Nombre') }}</label>
                  <input type="text" id="name" name="name"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
@@ -13,13 +13,16 @@
          </div>
 
          <div class="flex w-full flex-col gap-1 sm:flex-row sm:gap-4">
-             <div class="mb-3 w-full md:w-1/2">
+             <div class="mb-2 w-full">
                  <label for="phone" class="mb-2 block text-sm font-medium text-white">{{ __('Teléfono') }}</label>
                  <input type="tel" id="phone" name="phone"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
                      placeholder="{{ __('Ingresa tu número de teléfono') }}" required />
              </div>
-             <div class="mb-3 w-full md:w-1/2">
+         </div>
+
+         <div class="flex w-full flex-col gap-1 sm:flex-row sm:gap-4">
+             <div class="mb-2 w-full">
                  <label for="email"
                      class="mb-2 block text-sm font-medium text-white">{{ __('Correo electrónico') }}</label>
                  <input type="email" id="email" name="email"
@@ -29,7 +32,7 @@
          </div>
 
          <div class="flex w-full flex-col gap-1 sm:flex-row sm:gap-4">
-             <div class="mb-3 w-full">
+             <div class="mb-2 w-full">
                  <label for="subject" class="mb-2 block text-sm font-medium text-white">{{ __('Asunto') }}</label>
                  <input type="text" id="subject" name="subject"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"

@@ -2,6 +2,8 @@
 @use '../../node_modules/swiper/modules/navigation.css';
 @use '../../node_modules/swiper/modules/pagination.css';
 
+@use './title';
+@use './banner';
 @use './promotions';
 @use './header';
 @use './hamburger';
@@ -224,7 +226,7 @@ body {
             }
 
             a {
-                background: #ffffff1f;
+                background: rgb(255 255 255 / 8%);
                 padding: calc(var(--spacing) * 3);
             }
         }
@@ -235,6 +237,164 @@ body {
 
         a {
             padding: 0;
+        }
+    }
+}
+
+.contact-form-box {
+    .just-validate-error-label {
+        color: var(--color-accent-500) !important;
+    }
+}
+
+.custom-list {
+    padding-left: calc(var(--spacing) * 0.85);
+    li {
+        &::before {
+            background: url(@resources/svg/bullet.svg) no-repeat left center;
+            content: '';
+            display: block;
+            height: calc(var(--spacing) * 3.5);
+            left: 0;
+            top: calc(var(--spacing) * 0.75);
+            position: absolute;
+            width: calc(var(--spacing) * 3.5);
+        }
+    }
+}
+
+.cta-component {
+    > a {
+        &::before {
+            bottom: 0;
+            background: transparent;
+            content: '';
+            display: block;
+            height: 70%;
+            left: 0;
+            position: absolute;
+            width: 10px;
+        }
+
+        &::after {
+            top: 0;
+            background: red;
+            content: '';
+            display: block;
+            height: 10px;
+            right: 0;
+            position: absolute;
+            width: 40px;
+        }
+    }
+
+    &.purple {
+        > a {
+            border-bottom-color: var(--color-primary-700);
+            border-right-color: var(--color-primary-700);
+            color: var(--color-primary-700);
+
+            &::after,
+            &::before {
+                background-color: var(--color-primary-700);
+            }
+
+            &:hover {
+                background: var(--color-primary-700);
+                color: var(--color-white);
+
+                line,
+                path {
+                    stroke: var(--color-white);
+                }
+            }
+        }
+
+        line,
+        path {
+            stroke: var(--color-primary-700);
+        }
+    }
+
+    &.orange {
+        > a {
+            border-bottom-color: var(--color-accent-500);
+            border-right-color: var(--color-accent-500);
+            color: var(--color-accent-500);
+
+            &::after,
+            &::before {
+                background-color: var(--color-accent-500);
+            }
+
+            &:hover {
+                background: var(--color-accent-500);
+                color: var(--color-white);
+
+                line,
+                path {
+                    stroke: var(--color-white);
+                }
+            }
+        }
+
+        line,
+        path {
+            stroke: var(--color-accent-500);
+        }
+    }
+
+    &.blue {
+        > a {
+            border-bottom-color: var(--color-info);
+            border-right-color: var(--color-info);
+            color: var(--color-info);
+
+            &::after,
+            &::before {
+                background-color: var(--color-info);
+            }
+        }
+
+        line,
+        path {
+            stroke: var(--color-info);
+        }
+    }
+
+    &.green {
+        > a {
+            border-bottom-color: var(--color-success);
+            border-right-color: var(--color-success);
+            color: var(--color-success);
+
+            &::after,
+            &::before {
+                background-color: var(--color-success);
+            }
+        }
+
+        line,
+        path {
+            stroke: var(--color-success);
+        }
+    }
+
+    &.white {
+        > a {
+            border-bottom-color: var(--color-white);
+            border-right-color: var(--color-white);
+            color: var(--color-white);
+
+            &::after,
+            &::before {
+                background-color: var(--color-white);
+            }
+        }
+
+        line,
+        path {
+            stroke: var(--color-white);
         }
     }
 }
