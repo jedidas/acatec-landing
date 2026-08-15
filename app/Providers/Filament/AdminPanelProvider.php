@@ -6,7 +6,6 @@ use App\Filament\Resources\Banners\BannerResource;
 use App\Filament\Resources\Emails\EmailResource;
 use App\Filament\Resources\Pages\PageResource;
 use App\Filament\Resources\Promotions\PromotionResource;
-use App\Filament\Resources\Quotations\QuotationResource;
 use App\Filament\Resources\Settings\SettingResource;
 use App\Filament\Widgets\InformationWidget;
 use Filament\Http\Middleware\Authenticate;
@@ -76,7 +75,6 @@ class AdminPanelProvider extends PanelProvider
 
                             ...PageResource::getNavigationItems(),
                             ...EmailResource::getNavigationItems(),
-                            ...QuotationResource::getNavigationItems(),
                             ...PromotionResource::getNavigationItems(),
                             ...BannerResource::getNavigationItems(),
                             ...SettingResource::getNavigationItems(),

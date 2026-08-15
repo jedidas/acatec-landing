@@ -265,6 +265,9 @@ body {
 
 .cta-component {
     > a {
+        border-left: 0 !important;
+        border-top: 0 !important;
+
         &::before {
             bottom: 0;
             background: transparent;
@@ -273,7 +276,10 @@ body {
             height: 70%;
             left: 0;
             position: absolute;
-            width: 10px;
+            width: 6px;
+            @media (width >= 48rem) {
+                width: 10px;
+            }
         }
 
         &::after {
@@ -281,10 +287,13 @@ body {
             background: red;
             content: '';
             display: block;
-            height: 10px;
+            height: 6px;
             right: 0;
             position: absolute;
             width: 40px;
+            @media (width >= 48rem) {
+                height: 10px;
+            }
         }
     }
 
@@ -397,4 +406,9 @@ body {
             stroke: var(--color-white);
         }
     }
+}
+
+.section-lavender {
+    background: url(@resources/assets/images/lavender-bg.png) no-repeat top center var(--color-lavender-50);
+    background-size: cover;
 }
