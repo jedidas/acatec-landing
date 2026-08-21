@@ -51,6 +51,7 @@
          <div class="app__banner">
              @yield('banner')
          </div>
+         @include('pages._images-menu')
          <div class="flex flex-col">
              <div class="flex flex-col justify-between overflow-hidden">
                  <section>

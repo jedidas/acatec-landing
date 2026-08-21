@@ -8,7 +8,7 @@
                  <label for="name" class="mb-2 block text-sm font-medium text-white">{{ __('Nombre') }}</label>
                  <input type="text" id="name" name="name"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
-                     placeholder="{{ __('john.doe') }}" required />
+                     placeholder="{{ __('john.doe') }}" />
              </div>
          </div>
 
@@ -17,7 +17,7 @@
                  <label for="phone" class="mb-2 block text-sm font-medium text-white">{{ __('Teléfono') }}</label>
                  <input type="tel" id="phone" name="phone"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
-                     placeholder="{{ __('Ingresa tu número de teléfono') }}" required />
+                     placeholder="{{ __('Ingresa tu número de teléfono') }}" />
              </div>
          </div>
 
@@ -27,7 +27,7 @@
                      class="mb-2 block text-sm font-medium text-white">{{ __('Correo electrónico') }}</label>
                  <input type="email" id="email" name="email"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
-                     placeholder="{{ 'john.doe@' . env('reCAPTCHA_site_hostname') }}" required />
+                     placeholder="{{ 'john.doe@' . env('reCAPTCHA_site_hostname') }}" />
              </div>
          </div>
 
@@ -36,7 +36,7 @@
                  <label for="subject" class="mb-2 block text-sm font-medium text-white">{{ __('Asunto') }}</label>
                  <input type="text" id="subject" name="subject"
                      class="mb-1 block w-full rounded-sm border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-blue-500 focus:ring-blue-500"
-                     placeholder="{{ __('Breve descripción del asunto') }}" required />
+                     placeholder="{{ __('Breve descripción del asunto') }}" />
              </div>
          </div>
 

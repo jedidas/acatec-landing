@@ -1,4 +1,4 @@
-<section class="bg-gray-100 p-4 pt-10 pb-40" id="capacitaciones">
+<section class="bg-white p-4 pt-10 pb-40" id="capacitaciones">
     <div class="container m-auto mb-15 xl:mb-20 py-5">
         <x-title icon="capacitaciones" variant="purple" sub-heading="Capacitación especializada"
             class="mb-10">Capacitaciones</x-title>
