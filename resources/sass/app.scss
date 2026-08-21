@@ -5,6 +5,7 @@
 @use './title';
 @use './banner';
 @use './promotions';
+@use './visual-break';
 @use './header';
 @use './hamburger';
 @use './headroom';
@@ -159,7 +160,7 @@ body {
         }
 
         &::after {
-            background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
+            background-color: color-mix(in oklab, var(--color-primary-700) 60%, transparent);
             backdrop-filter: var(--tw-backdrop-blur,);
             content: '';
             height: 100%;
@@ -363,6 +364,16 @@ body {
             &::before {
                 background-color: var(--color-info);
             }
+
+            &:hover {
+                background: var(--color-info);
+                color: var(--color-white);
+
+                line,
+                path {
+                    stroke: var(--color-white);
+                }
+            }
         }
 
         line,
@@ -380,6 +391,16 @@ body {
             &::after,
             &::before {
                 background-color: var(--color-success);
+            }
+
+            &:hover {
+                background: var(--color-success);
+                color: var(--color-white);
+
+                line,
+                path {
+                    stroke: var(--color-white);
+                }
             }
         }
 
@@ -411,4 +432,18 @@ body {
 .section-lavender {
     background: url(@resources/assets/images/lavender-bg.png) no-repeat top center var(--color-lavender-50);
     background-size: cover;
+}
+
+.blue-lines {
+    background-image: url(@resources/svg/blue-lines.svg);
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.orange-lines {
+    background-image: url(@resources/svg/orange-lines.svg);
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

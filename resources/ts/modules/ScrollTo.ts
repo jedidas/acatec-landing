@@ -16,9 +16,9 @@ export default function ScrollTo(selector: string) {
         var scrollDiv = document.getElementById(id);
 
         if (scrollDiv) {
-            const top = scrollDiv.offsetTop + 70;
+            const top = scrollDiv.offsetTop + -50;
             window.scrollTo({ top, behavior: 'smooth' });
-            body && body.classList.remove('opened-menu');
+            body && body.classList.remove('open-menu');
         }
     };
 }

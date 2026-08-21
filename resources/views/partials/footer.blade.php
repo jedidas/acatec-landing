@@ -7,7 +7,7 @@
     <iframe class="lazy h-60 w-full" data-src="{{ config('settings.map_iframe') }}" width="600" height="450"
         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<footer class="bg-primary-700">
+<footer class="bg-primary-700" id="contacto">
     <div class="bg-accent-500 h-28"></div>
     <section class="container m-auto mb-10 flex w-full flex-col-reverse justify-between gap-6 px-3 lg:flex-row">
         <div class="w-full lg:w-1/2 pt-10">
@@ -82,7 +82,6 @@
                         </div>
                     </li>
 
-
                     <li>
                         <p>
                             <a href="mailto:{{ config('settings.site_email') }}"
@@ -93,6 +92,31 @@
                             </a>
                         </p>
                     </li>
+
+                    <li>
+                        <p>
+                            <a href="mailto:{{ config('settings.quote_email') }}"
+                                class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                target="_blank" rel="noopener noreferrer">
+                                <x-icon name="email" class="h-5 w-5 fill-accent-500" />
+                                {{ config('settings.quote_email') }}
+                            </a>
+                        </p>
+                    </li>
+
+
+                    @if (config('settings.waze'))
+                        <li>
+                            <p>
+                                <a href="{{ config('settings.waze') }}"
+                                    class="inline-flex items-center gap-3 text-white hover:text-warning underline text-sm lg:text-base hover:text-dark-orange"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <x-icon name="waze" class="h-5 w-5 fill-accent-500" />
+                                    ACATEC
+                                </a>
+                            </p>
+                        </li>
+                    @endif
                     @foreach ($telephoneNumbers ?? [] as $telephone)
                         <li>
                             <p>

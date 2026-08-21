@@ -69,6 +69,15 @@ class SettingSeeder extends Seeder
         ]);
 
         Setting::create([
+            'key' => 'quote_email',
+            'label' => 'Correo de cotizaciones',
+            'value' => 'cotizaciones@acatecso.com',
+            'type' => 'text',
+            'order' => 5,
+        ]);
+
+
+        Setting::create([
             'key' => 'schedule',
             'label' => 'Horario',
             'value' => '',
@@ -123,10 +132,23 @@ class SettingSeeder extends Seeder
             'type' => 'phones',
             'attributes' => [
                 [
+                    "number" => "88169777",
+                    "is_whatsapp" => true,
+                    "visible_number" => "+506 8816-9777",
+                    "text" => "Servicio al cliente"
+                ],
+                [
                     "number" => "70993933",
                     "is_whatsapp" => true,
-                    "visible_number" => "+506 7099-3933"
-                ]
+                    "visible_number" => "+506 7099-3933",
+                    "text" => "Servicios teléfono"
+                ],
+                [
+                    "number" => "83867171",
+                    "is_whatsapp" => true,
+                    "visible_number" => "+506 8386-7171",
+                    "text" => "Servicios teléfono"
+                ],
             ],
             'order' => 6,
         ]);
@@ -178,7 +200,15 @@ class SettingSeeder extends Seeder
         Setting::create([
             'key' => 'map_iframe',
             'label' => 'Mapa',
-            'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.3435530035595!2d-84.06736332448527!3d9.98845377323228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3417c3ec9b7%3A0xce577c5bac09ea49!2sAMB%20ideas!5e0!3m2!1ses-419!2sch!4v1785435956234!5m2!1ses-419!2sch',
+            'value' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4441.712092987301!2d-84.0769543!3d9.9344474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3612368a8d5%3A0x93f425484719ac68!2sEdificio%20Omni!5e1!3m2!1ses-419!2sch!4v1787098036740!5m2!1ses-419!2sch',
+            'type' => 'text',
+            'order' => 13,
+        ]);
+
+        Setting::create([
+            'key' => 'waze',
+            'label' => 'Waze',
+            'value' => 'https://ul.waze.com/ul?from=place.w.180813923.1808270305.2227306&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location',
             'type' => 'text',
             'order' => 13,
         ]);
