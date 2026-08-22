@@ -1,7 +1,10 @@
 .image-menu-item {
     position: relative;
-    @media (width >= 64rem) {
+    @media (width >= 48rem) {
         min-height: 110px;
+    }
+    @media (width >= 64rem) {
+        min-height: 210px;
     }
 
     &::before {
