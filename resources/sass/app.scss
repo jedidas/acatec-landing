@@ -4,6 +4,7 @@
 
 @use './title';
 @use './banner';
+@use './image-menu';
 @use './promotions';
 @use './visual-break';
 @use './header';
@@ -236,9 +237,9 @@ body {
             padding-block: calc(var(--spacing) * 1.5);
         }
 
-        a {
-            padding: 0;
-        }
+        // a {
+        //     padding: 0;
+        // }
     }
 }
 

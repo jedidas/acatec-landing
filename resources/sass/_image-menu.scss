@@ -1,0 +1,115 @@
+.image-menu-item {
+    position: relative;
+    @media (width >= 64rem) {
+        min-height: 110px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transition: all ease-in 0.3s;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    svg {
+        height: 20px;
+        transform-style: preserve-3d;
+        width: 20px;
+
+        @media (width >= 64rem) {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    svg,
+    span {
+        position: relative;
+        z-index: 5;
+    }
+
+    &:hover {
+        svg {
+            animation: coinFlip 0.5s ease-in-out;
+        }
+    }
+}
+
+.image-menu-capacitaciones {
+    background: url(@resources/assets/images/image-menu-capacitaciones@2x.jpg) no-repeat center center
+        var(--color-primary-700);
+    background-size: cover;
+
+    &:hover {
+        &::before {
+            background: rgba(#1b0166, 0.65);
+            opacity: 1;
+        }
+    }
+}
+
+.image-menu-outsourcing {
+    background: url(@resources/assets/images/image-menu-outsourcing@2x.jpg) no-repeat center center
+        var(--color-success-500);
+    background-size: cover;
+
+    &:hover {
+        &::before {
+            background: rgba(#3aaf35, 0.65);
+            opacity: 1;
+        }
+    }
+}
+
+.image-menu-planes {
+    background: url(@resources/assets/images/image-menu-planes@2x.jpg) no-repeat center center var(--color-neutral-500);
+    background-size: cover;
+
+    &:hover {
+        &::before {
+            background: rgba(#8e9db3, 0.65);
+            opacity: 1;
+        }
+    }
+}
+
+.image-menu-bandera {
+    background: url(@resources/assets/images/image-menu-bandera@2x.jpg) no-repeat center center var(--color-info);
+    background-size: cover;
+
+    &:hover {
+        &::before {
+            background: rgba(#116df9, 0.65);
+            opacity: 1;
+        }
+    }
+}
+
+.image-menu-servicios {
+    background: url(@resources/assets/images/image-menu-servicios@2x.jpg) no-repeat center center
+        var(--color-accent-500);
+    background-size: cover;
+
+    &:hover {
+        &::before {
+            background: rgba(#f44f1a, 0.65);
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes coinFlip {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}

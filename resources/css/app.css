@@ -113,6 +113,10 @@
     --shadow-lg: 0 12px 24px rgb(15 30 54 / 0.15);
 }
 
+:root {
+    --color-primary-700: #1b0166;
+}
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
