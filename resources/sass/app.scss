@@ -448,3 +448,30 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.box-info {
+    border-left: none;
+    border-top: none;
+
+    &::before,
+    &::after {
+        background: #fff;
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    &::before {
+        height: 10px;
+        top: 0;
+        right: 0;
+        width: 10%;
+    }
+
+    &::after {
+        bottom: 0;
+        height: 55%;
+        left: 0;
+        width: 10px;
+    }
+}
