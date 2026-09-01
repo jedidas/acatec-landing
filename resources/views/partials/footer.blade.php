@@ -145,53 +145,53 @@
             <div class="inline-block mb-5 bg-primary-800/90 backdrop-blur-md p-7 lg:max-w-96 w-full">
                 <nav class="ul">
                     <h4 class="font-bold text-white text-dark-orange mb-3">{{ __('Menu') }}</h4>
-                    <ul class="flex flex-col gap-2">
+                    <ul class="flex flex-col gap-0">
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="{{ route('home.index') }}"
-                                class="inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Inicio') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#capacitaciones" data-href="capacitaciones"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Capacitaciones') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#outsourcing" data-href="outsourcing"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Outsourcing') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#planes" data-href="planes"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Planes y programas') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#bandera" data-href="bandera"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Bandera azul') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#servicios" data-href="servicios"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Servicios') }}
                             </a>
                         </li>
                         <li class="relative pl-5">
                             <x-icon name="bullet" class="absolute left-1 top-[50%] translate-[-50%]" />
                             <a href="#contacto" data-href="contacto"
-                                class="wd-scroll inline-block text-sm lg:text-base p-4 text-white hover:text-warning">
+                                class="wd-scroll inline-block text-sm lg:text-base p-1 text-white hover:text-warning">
                                 {{ __('Contacto') }}
                             </a>
                         </li>
