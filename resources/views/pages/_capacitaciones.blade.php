@@ -50,15 +50,27 @@
 
                 <h3 class="text-text-light text-lg font-black mb-2">Temas</h3>
                 <ul class="list custom-list mb-7">
-                    <li class="">
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Ergonomía.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Factores psicosociales.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Análisis de riesgos.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Primeros auxilios.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">RCP.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Primero Auxilios psicológicos.</li>
-                    <li class="text-text-muted text-base mb-2 relative pl-3.5">Temas ambientales varios… no sé cómo se
-                        puede colocar.</li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Ergonomía.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Factores psicosociales.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Análisis de riesgos.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Primeros auxilios.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        RCP.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Primero Auxilios psicológicos.
+                    </li>
+                    <li class="text-text-muted text-base mb-2 relative pl-3.5">
+                        Temas ambientales varios… no sé cómo se puede colocar.
+                    </li>
                 </ul>
             </div>
 
